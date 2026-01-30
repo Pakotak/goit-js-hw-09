@@ -1,0 +1,49 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: auto;
+  margin: auto;
+  list-style: none;
+  justify-content: center;
+}
+
+.gallery-item .gallery-link {
+  flex-basis: calc((100% - 48px) / 3);
+  overflow: hidden;
+}
+
+.gallery-image {
+  display: block;
+  width: 360px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  transform-origin: center;
+}
+
+.sl-wrapper {
+  background: #2e2f42cc;
+}
+
+.sl-next,
+.sl-prev,
+.sl-close {
+  color: white !important;
+  font-size: 24px !important;
+}
+.sl-counter {
+  color: white !important;
+}
+
+.sl-caption {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sl-wrapper.sl-active .sl-caption {
+  opacity: 1;
+}
